@@ -1,11 +1,3 @@
-const $form = document.formulario;
-
-const nombre = $form.nombre.value;
-const ciudad = $form.ciudad.value;
-const descripcionRegalo = $form["descripcion-regalo"].value;
-
-
-
 function validarNombre(nombre) {
     if (nombre.length === 0) {
         return "Este campo debe tener al menos 1 caracter";
@@ -18,14 +10,12 @@ function validarNombre(nombre) {
     }
     return "";
 }
-
 function validarCiudad(ciudad) {
     if (ciudad.length === 0) {
         return "Este campo no puede quedar vacio";
     }
     return "";
 }
-
 function validarDescripcionRegalo(descripcionRegalo) {
     if (descripcionRegalo.length === 0) {
         return "Este campo debe tener al menos 1 caracter";
@@ -39,3 +29,14 @@ function validarDescripcionRegalo(descripcionRegalo) {
     return "";
 }
 
+function validarFormulario() {
+    const $form = document.formulario;
+
+    const errorNombre = validarNombre($form.nombre.value);
+    const ciudad = $form.ciudad.value;
+    const descripcionRegalo = $form["descripcion-regalo"].value;
+}
+
+function manejarErrores(errores) {
+    
+}
